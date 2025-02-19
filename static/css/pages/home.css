@@ -111,7 +111,7 @@ body {
 /* Video Audio Button (icon)*/
 .video__audio-button {
     position: absolute;
-    top: calc(100% + 35px); /* Adjust position */
+    top: calc(100% + 35px);
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -133,7 +133,7 @@ body {
 .audio-icon.active {
     opacity: 1;
     visibility: visible;
-    position: relative; /* Ensures it stays in flow */
+    position: relative;
 }
 
 

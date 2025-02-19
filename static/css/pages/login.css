@@ -61,21 +61,6 @@ body {
     display: flex;
 }
 
-/* .form label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    color: gray;
-}
-
-.form input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    font-size: 16px;
-    margin-bottom: 15px;
-    outline: none;
-} */
 .form-group {
     position: relative;
     margin-bottom: 20px;

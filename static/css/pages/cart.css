@@ -116,20 +116,6 @@ td {
     word-wrap: break-word;
 }
 
-/* .quantity-box {
-    display: flex;
-    align-items: center;
-}
-.quantity-box button {
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-.quantity-box input {
-    width: 30px;
-    text-align: center;
-    margin: 0 5px;
-} */
 .quantity-box {
     display: flex;
     align-items: center;
@@ -269,7 +255,7 @@ td {
     .coupon button {
         width: 30%;
         font-size: 14px;
-        margin-top: 10px; /* Added margin for spacing */
+        margin-top: 10px;
     }
 
     .cart-buttons {
@@ -298,7 +284,7 @@ td {
     .cart-container {
         flex-direction: column;
         width: 90%;
-        margin: 0 auto; /* Centering the container */
+        margin: 0 auto;
     }
 
     .cart-items {
@@ -352,7 +338,7 @@ td {
     .cart-container {
         flex-direction: row;
         width: 70%;
-        margin: 0 auto; /* Centering the container */
+        margin: 0 auto;
     }
 
     .cart-items {

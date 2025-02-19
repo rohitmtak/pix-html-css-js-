@@ -1,18 +1,6 @@
  /**********************************
  *            Navbar              *
  **********************************/
- /* .navbar {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 30px 20px;
-     background: #f8f8f8;
-     border-bottom: 1px solid #808080;
-     position: relative;
-     width: 100%;
- } */
-
- /* Navbar always on top */
 .navbar {
     display: flex;
     align-items: center;
@@ -20,11 +8,11 @@
     padding: 30px 20px;
     background: white;
     border-bottom: 1px solid #bfc0c6;
-    position: relative; /* Keep it fixed on top */
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999; /* Highest z-index to stay above everything */
+    z-index: 9999;
 }
 
  .navbar__logo {
