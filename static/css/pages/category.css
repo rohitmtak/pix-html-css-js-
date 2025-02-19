@@ -1,0 +1,172 @@
+/**********************************
+ *   Extra Navbar Functionality   *
+ **********************************/
+ .product-display .navbar {
+    /* background: transparent !important; */
+    /* border-bottom: none !important; */
+    position: sticky !important;
+}
+
+.product-display .search-input {
+    background: transparent !important;
+}
+
+
+
+/* Filter */
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    margin: 0;
+}
+
+.product {
+    text-align: center;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.product__image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: none;
+    cursor: pointer;
+}
+
+.product__title {
+    padding: 10px 0 5px 0;
+}
+
+.product__price {
+    padding-bottom: 30px;
+}
+
+/* Carousel */
+.product__image--carousel {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Show arrows only on hover */
+.product__image:hover .arrow {
+    opacity: 1;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Dots for color variants */
+.dots {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    display: flex;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    cursor: pointer;
+    border: 1px solid black;
+    position: relative;
+}
+
+/* Hide the checkmark initially */
+.dot i {
+    display: none;
+    font-size: 12px;
+    color: #2c3e50;
+}
+
+/* Show checkmark when active */
+.dot.active i {
+    display: block;
+}
+
+
+/**********************************
+ *       Responsive Section       *
+ **********************************/
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hide search box and right navbar icons */
+    .navbar__left input,
+    .navbar__right {
+        display: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .search-icon {
+        display: none !important;
+    }
+
+    /* Stack footer sections in a column */
+    .footer__sections {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .footer__section {
+        min-width: auto;
+        width: 100%;
+    }
+}

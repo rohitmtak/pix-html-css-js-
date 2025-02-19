@@ -1,0 +1,40 @@
+/* Ensuring the navbar and footer are unaffected by the video */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Make sure it's always on top */
+}
+
+.footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+/* Video Container (taking the whole viewport) */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    z-index: 1; /* Place behind navbar */
+    overflow: hidden;
+}
+
+/* Video Style */
+video {
+    object-fit: cover; /* Ensure video doesn't get stretched or distorted */
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-out; /* Smooth transition for scaling */
+    transform-origin: top center; /* Ensure it scales from the top center */
+    position: absolute; /* Absolute positioning inside the container */
+}
+
+/* Footer styles */
+/* .footer {
+    position: relative;
+    background: #f8f8f8;
+} */

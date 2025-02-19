@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/base/navbar.css">
+    <link rel="stylesheet" href="/static/css/base/footer.css">
+    <link rel="stylesheet" href="/static/css/pages/footer-links.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+    <!-- Orders - Shipping - Delivery -->
+    <div class="container">
+        <h1 class="title">Orders – Shipping – Delivery</h1>
+
+        <h2>What is PIX’s Shipping Policy?</h2>
+        <p>
+            We at PIX strive to deliver products purchased from us in excellent condition and in the fastest time possible. PIX
+            ships according to the delivery timelines provided for each Product. We ensure that we ship as early as possible, but
+            for some products the timelines are longer due to availability of products, nature of customization to suit your
+            requirement and/or location of the delivery.
+        </p>
+        <p>
+            To ensure that your order is delivered on-time, please make sure of that you enter the correct information while
+            providing your shipping address and phone number details.
+        </p>
+        <p>
+            If you receive a damaged parcel, please DO NOT accept it and inform us at 020 – 41207311 (11AM – 6PM) or email us at
+            <strong>support@highstreetpix.com</strong>
+        </p>
+        <p>
+            For orders on highstreetpix.com the prices which are listed at the time of your order on the product page apply. These
+            prices are exclusive of taxes and the final price (inclusive of taxes) are shown in the ‘shopping cart’ page.
+        </p>
+
+        <h2>How do I check the status of my order?</h2>
+        <p>
+            Once your order has dispatched, you will receive a Shipping Confirmation email which will have the name of the courier
+            company via which your order has been dispatched along with the Tracking ID that you can use to track you order at every
+            step as it reaches you.
+        </p>
+        <p>
+            Please tap on “<strong>My Orders</strong>” section under “<strong>My Account</strong>” on the Website to check your order status.
+        </p>
+        <p>
+            Sometimes, there can be a delay in the delivery due to unavoidable circumstances which include:
+        </p>
+        <ul>
+            <li>
+                Network issues
+            </li>
+            <li>
+                Unexpected weather conditions
+            </li>
+            <li>
+                Riots, pandemic, etc.
+            </li>
+            <li>
+                Unlocatable or Incomplete address (In such cases, it would be advisable for you to contact the courier company and let
+                them know of your complete address or any landmarks to easily trace your address.)
+            </li>
+        </ul>
+
+        <h2>What are the Shipping Charges?</h2>
+        <p>
+            Shipping within India is FREE! For deliveries within India, all taxes and duties are included in the price of the
+            product listed on the Website.
+        </p>
+        <p>
+            For cross-border orders, there is a handling charge that will show up as you proceed to pay, depending upon your
+            location. As such, customs duties and local taxes have to be paid by you to our shipping partner at the time of shipment
+            delivery. The amount of duties and taxes depend on the policies of your destination country. 
+        </p>
+
+        <h2>How are orders placed on the Website delivered to me?</h2>
+        <p>
+            All orders placed on the Website are dispatched through one of our courier partners such as FedEx, Aramex, Blue Dart,
+            DHL, Speed Post, etc.
+        </p>
+
+        <h2>Can I modify my delivery address?</h2>
+        <p>
+            Yes, you can surely add or remove delivery addresses. You may follow the steps below:
+        </p>
+        <p>
+            In order to add or remove a particular address, you’d first need to log-in with your registered mail id and password.
+        </p>
+        <p>
+            Once done, click on the “<strong>Delivery Address</strong>” tab. Click on the “<strong>Edit</strong>” option – to edit
+            an existing address with the required details and ensure you hit the “<strong>Save Address</strong>” tab and you are good to go!
+        </p>
+        <p>
+            Please note – Address changes done here will not be reflected in your orders that you have already been placed.
+            Nevertheless, in case you have to change or update your address after placing the order, simply get in touch with us and
+            we shall help you further.
+        </p>
+
+        <h2>Tracking status says “Address unlocatable/Incomplete”, what should I do?</h2>
+        <p>
+            For any kind of address related issues, it’ll be best to provide the courier company with your complete address along
+            with some helpful landmark for them to trace your address easily.
+        </p>
+
+        <h2>Tracking status says “Consignee not available/Premises Closed”, what should I do?</h2>
+        <p>
+            If there’s a convenient time when you know you’ll be readily available to accept your order, please get in touch with
+            the courier company to schedule delivery for your order.
+        </p>
+
+        <h2>Tracking Status says “Network Delay”, what should I do?</h2>
+        <p>
+            This usually happens because of unexpected weather conditions, festivals, riots, pandemic or other unforeseen calamities
+            in your delivery area. The delivery is usually arranged for the next working day subject to conditions being eased.
+        </p>
+
+        <h2>What if I missed the courier person, can I reschedule the delivery?</h2>
+        <p>
+            Not to worry! We usually try and inform our customers when the delivery is going to be attempted (as the delivery person
+            may or may not contact you before attempting delivery). But if for whatever reason you’ve missed the delivery person
+            once, don’t worry about it. The courier companies attempt delivery on the same address at least twice.
+        </p>
+        <p>
+            However, instead of them attempting delivery again and missing you, it’ll be advisable to let the courier company know
+            of a suitable time and date when you’ll be present at the delivery address and have them attempt delivery again. If
+            you’re not able to get it sorted then you may escalate the issue to us and we shall do the needful.
+        </p>
+        <p>
+            Even if you’ve missed the delivery TWICE, if you let us know quickly enough, we can get the courier company to attempt
+            the delivery for yet another time at your requested date and time.
+        </p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__sections">
+            <section class="footer__section">
+                <h3>Explore High Street Pix</h3>
+                <ul>
+                    <li><a href="#">Bridal Couture</a></li>
+                    <li><a href="#">Signature Collection</a></li>
+                    <li><a href="#">Luxury Fusion Lounge</a></li>
+                    <li><a href="#">Contemporary Drapes</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>Policy</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Returns & Cancellation</a></li>
+                    <li><a href="#">Orders - Shipping - Delivery</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>More About Pix</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Locate Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__info">HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road, Camp, Pune -
+            411001, Maharashtra, India | Contact : # 020 - 41207311</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>

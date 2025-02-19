@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/base/navbar.css">
+    <link rel="stylesheet" href="/static/css/base/footer.css">
+    <link rel="stylesheet" href="/static/css/pages/footer-links.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+    <!-- Returns & Cancellation -->
+    <div class="container">
+        <h1 class="title">Returns & Cancellation</h1>
+        <p>
+            Your trust in PIX is our utmost priority.
+        </p>
+    
+        <p style="color: red;">
+            <strong>
+                Our policy strictly does not accommodate refunds under any circumstances. The highest form of compensation we offer is
+                store credit, redeemable for future purchases.
+            </strong>
+        </p>
+
+        <h2>No Refund/ Cancellations:</h2>
+        <p>
+            Due to the nature of the products, all merchandise are made to measure and arranged specially to suit your order. Hence,
+            we cannot refund or cancel any orders.
+        </p>
+
+        <h2>RETURNS</h2>
+
+        <h2>How do I return/exchange an item?</h2>
+        <p>
+            In the unlikely scenario you receive a product with a manufacturing defect, or if you receive an incorrect / damaged /
+            different product, incorrect size, or one with missing accessories, please raise a return request within 3 days of
+            delivery. Based on the facts and circumstances, a replacement shall be arranged. Please note that, PIX does not provide
+            any guarantee, warranty for the fabric and colour of the products.
+        </p>
+        <p>
+            Please <strong>CLICK HERE</strong> to initiate a return for replacement. Your return request should contain the order number, barcode and
+            comprehensive details along with image(s)/ video of the defects/complaints of the product while unboxing the order
+            delivered to you.
+        </p>
+        <p>
+            We will personally ensure that the issue is resolved satisfactorily. Please make sure that the original product tag and
+            packing is intact when you send us the product back. We’re pleased to offer store credit for returned/replaced items and
+            REFUNDS WILL NOT BE PROVIDED UNDER ANY CIRCUMSTANCES. The store credit issued is valid for one year from the date of
+            issue.
+        </p>
+        <p>
+            Following products shall not be eligible for return:
+        </p>
+        <ul>
+            <li>
+                Any product that is returned without all original packaging and all other items originally included with the product
+                at the time of delivery.
+            </li>
+            <li>
+                Any item that has been worn or washed.
+            </li>
+        </ul>
+        <p>
+            All returns are subject to PIX’ discretion and quality inspection at our end. However, rest assured, we strive to handle
+            each case with thoughtful consideration.
+        </p>
+
+        <h2>CANCELLATION</h2>
+
+        <h2>How do I cancel an order?</h2>
+        <p>
+            While cancellations would not be entertained after an order is successfully placed with us, please mail us at
+            support@highstreetpix.com to request a cancellation of your order.
+        </p>
+
+        <h2>Return Policy Abuse</h2>
+        <p>
+            We want all our customers to have a great experience with us at highstreetpix.com. In order for our 3 Day Easy
+            Replacement Policy to be sustainable and fair for all, we take Return and Replacement Policy abuse seriously.
+        </p>
+        <p>
+            We monitor customers who have placed multiple Return & Exchange requests with us. Even the ones who place these requests
+            over multiple accounts. This makes us feel like there are certain customers who are not here to shop but to “borrow” a
+            product just to return it later. We will deny repeat return requests from customers who use such tactics and prohibit
+            them from future purchases.
+        </p>
+        <p>
+            We want you to have a pleasurable shopping experience with us. While most of our customers use our policies as intended,
+            we would really appreciate it if everyone would kindly respect our policies so that we can continue serving you better.
+        </p>
+        <p>
+            We don’t want the handful of people who attempt to abuse our policy to ruin the experience for everyone else.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__sections">
+            <section class="footer__section">
+                <h3>Explore High Street Pix</h3>
+                <ul>
+                    <li><a href="#">Bridal Couture</a></li>
+                    <li><a href="#">Signature Collection</a></li>
+                    <li><a href="#">Luxury Fusion Lounge</a></li>
+                    <li><a href="#">Contemporary Drapes</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>Policy</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Returns & Cancellation</a></li>
+                    <li><a href="#">Orders - Shipping - Delivery</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>More About Pix</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Locate Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__info">HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road, Camp, Pune -
+            411001, Maharashtra, India | Contact : # 020 - 41207311</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>

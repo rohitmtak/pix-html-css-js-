@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/base/navbar.css">
+    <link rel="stylesheet" href="/static/css/base/footer.css">
+    <link rel="stylesheet" href="/static/css/pages/footer-links.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+</head>
+
+<body class="footer-page">
+
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu(); navTrans()" id="menuButton">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+    <!-- Full-Screen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <!-- Left Side - Menu -->
+        <div class="menu-overlay__left">
+            <ul class="menu-overlay__list">
+                <li><a href="/templates/category/bridal.html">Bridal Couture</a></li>
+                <li><a href="/templates/category/signature.html">Signature Collection</a></li>
+                <li><a href="/templates/category/luxury.html">Luxury Fusion Lounge</a></li>
+                <li><a href="/templates/category/contemporary.html">Contemporary Drapes</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Side - Image -->
+        <div class="menu-overlay__right">
+            <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
+        </div>
+    </div>
+
+    <!-- Terms of Use -->
+
+    <div class="container">
+        <h1 class="title">Terms of Use</h1>
+        <p class="website-link">
+            <a href="https://highstreetpix.com/" target="_blank">https://highstreetpix.com/</a>
+            (<strong>“Website”</strong>) is owned and operated by Anand Narang, Muskaan Narang, partners of HIGH STREET
+            PIX, having its office at 22-25, Wonderland, Lower Ground floor, 7 M.G. Road, Camp, Pune – 411001,
+            Maharashtra, India
+            (hereinafter, <strong>“PIX”</strong>, <strong>“we”</strong>, <strong>“us”</strong>, or <strong>“owner of the
+                Website”</strong>).
+            All information, products and services displayed on the <a href="https://highstreetpix.com/"
+                target="_blank">https://highstreetpix.com/</a>
+            website (hereinafter, the <strong>“Website”</strong>) constitute an ‘invitation to offer’. Your order for
+            purchase constitutes your ‘offer’
+            which shall be subject to the terms and conditions as listed below. The Website has the right to accept or
+            reject your offer without
+            assigning any reason thereof.
+        </p>
+
+        <p>
+            In order to use the Website, you (the <strong>“User”</strong>) have accepted the following terms and
+            conditions given below.
+            We reserve the right to add, delete, alter or modify these terms and conditions at any time. You are
+            therefore advised to carefully read these
+            terms and conditions every time you use the Website.
+        </p>
+
+        <h2>Use of the Website</h2>
+        <p>
+            As part of the registration as a customer of PIX you will be asked to submit personal data. Our <strong><a
+                    href="#">Privacy Policy</a></strong>
+            would be applicable in this respect. You are responsible for ensuring that the data is complete and correct.
+            Your registration will be confirmed by email. You are obliged to treat your password and any other
+            credentials confidential
+            and protected from access by any unauthorized third party. PIX reserves the right to refuse registration
+            without giving reasons.
+        </p>
+
+        <h2>Customer Information</h2>
+        <p>
+            The User agrees to give accurate, authentic and true information. PIX reserves the right to confirm and
+            validate the information provided by the User at any point of time. If any such User details are found not
+            to be true wholly or partly, PIX has the right in its sole discretion to reject the registration and debar
+            the User from using the services of Website without prior intimation whatsoever.
+        </p>
+
+        <h2>Colour Discrepancy</h2>
+        <p>
+            While we have made every effort to display the shapes and colours of our Products on the Website as accurately as
+            possible, they mostly depend on your monitor and may therefore be perceived differently.
+        </p>
+
+        <h2>Customer should be 18 Years of age and above</h2>
+        <p>
+            The User certifies that he/she is at least 18 (eighteen) years of age or has the consent of a parent or legal guardian.
+        </p>
+
+        <h2>Retention of Title</h2>
+        <p>
+            Ownership of the Products is transferred to the User only upon full payment.
+        </p>
+
+        <h2>Changes in Price and Stock Availability</h2>
+        <p>
+            The prices and availability of products are subject to change without prior notice, at the sole discretion of PIX.
+            PIX reserves the right to refuse or cancel any order placed for a Product that is listed at an incorrect price or for
+            any other reason. This shall be regardless of whether the order has been confirmed and/or payment been received. The
+            payment shall be refunded, and the User shall be informed of the same.
+        </p>
+
+        <h2>Intellectual Property Rights</h2>
+        <p>
+            All material on the Website, including images, illustrations, audio and video clips, are protected by copyrights,
+            trademarks, and other intellectual property rights. The Material on PIX is solely for Your personal, non-commercial use.
+            You must not copy, reproduce, republish, upload, post, transmit or distribute such material in any way, whether directly
+            or indirectly, without the prior written consent of PIX. We reserve the right to use/reproduce any content uploaded by
+            You on the Website and You agree to grant an irrevocable, unconditional, perpetual, royalty-free, and worldwide right to
+            PIX to use the content for reasonable business purposes.
+        </p>
+
+        <h2>Indemnity</h2>
+        <p>
+            You shall indemnify and hold harmless PIX, its owners, partners, licensors/ees, affiliates, and their respective
+            officers, agents, and employees, from any claim or demand, or actions including reasonable attorneys’ fees, made by any
+            third party arising out of Your breach of these Terms, Privacy Policy and other Policies, or Your violation of any law,
+            or the rights (including infringement of intellectual property rights) of PIX or any third party.
+        </p>
+
+        <h2>Disclaimer</h2>
+        <p>
+            PIX and its representatives, agents will be liable only for intentional and gross negligence, unless there are
+            fraudulently concealed damages, damages for loss of life, limb or health or damage arising from any infringement of
+            essential contractual obligations.
+        </p>
+        <p>
+            This disclaimer of liability also applies to any damages or injury caused by the use of services on the Website, loss of
+            revenue or data resulting from delays, non-deliveries, missed deliveries, or service interruptions as may occur because
+            of any act/omission of PIX, any failure of performance, negligence, defect, deletion, error, omission, interruption,
+            delay in operation or transmission, computer virus, communication line failure, theft or destruction, whether for breach
+            of contract, tortious behavior, or any other cause of action.
+        </p>
+        <p>
+            PIX will not be liable for any type or kind of credit/debit card fraud. The liability to use a card fraudulently and the
+            onus to ‘prove otherwise’ shall be exclusively on the User.
+        </p>
+        <p>
+            The Website may include hyperlinks to other websites. PIX has no control over the content of these sites, nor does it
+            endorse them and is not responsible for their content.
+        </p>
+
+        <h2>Termination</h2>
+        <p>
+            PIX shall not be held responsible for non-availability of the Website during periodic maintenance operations or any
+            unplanned suspension of access to the Website. To the maximum extent that is permissible under law, PIX’s liability
+            shall be limited to an amount equal to the price of the Products bought by You from PIX.
+        </p>
+        <p>
+            If You or PIX terminates your use of the Website or any Service, PIX may delete any content or other materials relating
+            to your use of the Service and PIX will have no liability to you or any third party for doing so. However, your
+            transactions details may be preserved by PIX for purposes of tax or regulatory compliance.
+        </p>
+        <p>
+            If You use any false e-mail address or use the Website for any unlawful or fraudulent purpose, which may cause annoyance
+            or inconvenience and abuses any policy of PIX or mislead PIX by sharing multiple address and phone numbers or
+            transacting with mala-fide intention, then PIX reserves the right to refuse access to the portal, terminate accounts
+            including any linked accounts without notice to you. Any credits earned through loyalty or referral program, PIX credits
+            and pending refunds, if any will be forfeited in such cases. Returns/Exchanges for such Users shall be at the sole
+            discretion of PIX.
+        </p>
+
+        <h2>Exclusive Jurisdiction</h2>
+        <p>
+            These Terms shall be construed in accordance with the applicable laws of India, without giving effect to any principles
+            of conflicts of laws. The Courts at Pune shall have exclusive jurisdiction in any proceeding arising out of this
+            agreement, after we have attempted to resolve your complaint as per these Terms & applicable law.
+        </p>
+
+        <h2>Severability</h2>
+        <p>
+            Should any provision of these Terms be legally void, this would not invalidate the whole agreement between You and PIX.
+            Instead, the invalid provision shall be replaced with an effective provision with the same economic purpose. The same
+            applies to possible gaps in this agreement.
+        </p>
+
+        <h2>Service And Complaints</h2>
+        <p>
+            The satisfaction of our customers is close to our hearts. Therefore, we endeavor to deal with your concerns as quickly
+            as possible after receiving your inputs at : <strong>contact@highstreetpix.com</strong>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__sections">
+            <section class="footer__section">
+                <h3>Explore High Street Pix</h3>
+                <ul>
+                    <li><a href="#">Bridal Couture</a></li>
+                    <li><a href="#">Signature Collection</a></li>
+                    <li><a href="#">Luxury Fusion Lounge</a></li>
+                    <li><a href="#">Contemporary Drapes</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>Policy</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Returns & Cancellation</a></li>
+                    <li><a href="#">Orders - Shipping - Delivery</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>More About Pix</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Locate Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__info">HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road, Camp, Pune -
+            411001, Maharashtra, India | Contact : # 020 - 41207311</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function navTrans() {
+            const navbar = document.querySelector(".footer-page .navbar");
+            if (navbar) {
+                navbar.classList.toggle("no-background");
+            }
+        }
+     </script>
+    <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>

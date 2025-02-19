@@ -1,0 +1,182 @@
+.navbar {
+    /* background: transparent !important; */
+    border-bottom: none !important;
+    /* position: sticky !important; */
+}
+
+
+body {
+    background-color: white;
+  }
+
+/* Sign In and Create An Account */
+
+/* Container */
+.account-container {
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+    height: calc(100vh - 95px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.account-container h1 {
+    font-size: 26px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.tab {
+    color: gray;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+/* Form */
+.form {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form.active {
+    display: flex;
+}
+
+/* .form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+} */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.form label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: gray;
+    transition: 0.3s ease all;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.form input:focus + label,
+.form input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 14px;
+    color: black;
+}
+
+
+
+/* Password Field */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+}
+
+/* Remember Me */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 5px;
+}
+
+/* Sign-in & Sign-up Button */
+.account-container button {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Additional Text Styling for Sign-up */
+p {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+}

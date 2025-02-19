@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pix</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/css/base/style.css">
+  <link rel="stylesheet" href="/static/css/base/navbar.css">
+  <link rel="stylesheet" href="/static/css/base/footer.css">
+  <link rel="stylesheet" href="/static/css/pages/category.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body class="product-display">
+
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="navbar__left">
+      <button class="menu-btn" onclick="toggleMenu()" id="menuButton">
+          <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+      <div class="search__box">
+          <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+      </div>
+  </div>
+    <!-- <div class="navbar__left">
+      <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="search__box">
+        <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search..." />
+      </div>
+    </div> -->
+
+    <a href="/templates/home/index.html" class="navbar__logo">
+      <img src="/static/images/pix-black-logo.png" alt="Pix Logo" />
+    </a>
+
+    <div class="navbar__right">
+      <i class="far fa-user"></i>
+      <i class="far fa-heart"></i>
+      <i class="fa-solid fa-bag-shopping"></i>
+    </div>
+  </header>
+
+  <!-- Full-Screen Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay">
+    <!-- Left Side - Menu -->
+    <div class="menu-overlay__left">
+        <ul class="menu-overlay__list">
+            <li><a href="/templates/category/bridal.html">Bridal Couture</a></li>
+            <li><a href="/templates/category/signature.html">Signature Collection</a></li>
+            <li><a href="/templates/category/luxury.html">Luxury Fusion Lounge</a></li>
+            <li><a href="/templates/category/contemporary.html">Contemporary Drapes</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </div>
+
+    <!-- Right Side - Image -->
+    <div class="menu-overlay__right">
+        <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
+    </div>
+</div>
+
+  <!-- Filter Section -->
+  <section class="filter">
+    <i class="fa-solid fa-sliders"></i>
+    <p>Filter by</p>
+  </section>
+
+  <!-- Product Section -->
+  <section class="products">
+    <main class="product-grid">
+      <article class="product">
+        <div class="product__image">
+          <img src="/static/images/signature/img1.jpg" alt="Lexicon Luxe" />
+        </div>
+        <h3 class="product__title">Bridal Lehenga</h3>
+        <p class="product__price">Rs. 45000</p>
+      </article>
+
+      <!-- carasoul used here -->
+      <article class="product">
+        <div class="product__image product__image--carousel">
+          <img id="productImage" src="/static/images/signature/img2.jpg" alt="ThreadCraft Vibes" />
+
+          <!-- <img id="productImage" src="/static/images/signature/img2.jpg" alt="ThreadCraft Vibes" onclick="redirectToProductPage()" style="cursor: pointer;" /> -->
+
+
+          <button class="arrow left" onclick="prevImage()">&#10094;</button>
+          <button class="arrow right" onclick="nextImage()">&#10095;</button>
+          <!-- Dots should be inside this div -->
+          <div class="dots">
+            <span class="dot" onclick="changeColorVariant(0)"></span>
+            <span class="dot" onclick="changeColorVariant(1)"></span>
+          </div>
+        </div>
+        <h3 class="product__title">Bridal Lehenga</h3>
+        <p class="product__price">Rs. 45000</p>
+      </article>
+
+      <!-- Repeat for more products -->
+      <article class="product">
+        <div class="product__image">
+          <img src="/static/images/signature/img3.jpg" alt="Lexicon Luxe" />
+        </div>
+        <h3 class="product__title">Bridal Lehenga</h3>
+        <p class="product__price">Rs. 45000</p>
+      </article>
+      
+    </main>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__sections">
+      <section class="footer__section">
+        <h3>Explore High Street Pix</h3>
+        <ul>
+          <li><a href="#">Bridal Couture</a></li>
+          <li><a href="#">Signature Collection</a></li>
+          <li><a href="#">Luxury Fusion Lounge</a></li>
+          <li><a href="#">Contemporary Drapes</a></li>
+        </ul>
+      </section>
+      <section class="footer__section">
+        <h3>Policy</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Returns & Cancellation</a></li>
+          <li><a href="#">Orders - Shipping - Delivery</a></li>
+        </ul>
+      </section>
+      <section class="footer__section">
+        <h3>More About Pix</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Locate Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Company Profile</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="footer__info">
+      HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road,
+      Camp, Pune - 411001, Maharashtra, India | Contact : # 020 - 41207311
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/static/js/pages/product.js"></script>
+  <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>

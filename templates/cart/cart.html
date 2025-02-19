@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/base/style.css">
+    <link rel="stylesheet" href="/static/css/base/navbar.css">
+    <link rel="stylesheet" href="/static/css/base/footer.css">
+    <link rel="stylesheet" href="/static/css/pages/cart.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+</head>
+
+<body class="cart-page">
+
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu()" id="menuButton">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <!-- <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div> -->
+    </header>
+
+    <!-- Full-Screen Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <!-- Left Side - Menu -->
+        <div class="menu-overlay__left">
+            <ul class="menu-overlay__list">
+                <li><a href="/templates/category/bridal.html">Bridal Couture</a></li>
+                <li><a href="/templates/category/signature.html">Signature Collection</a></li>
+                <li><a href="/templates/category/luxury.html">Luxury Fusion Lounge</a></li>
+                <li><a href="/templates/category/contemporary.html">Contemporary Drapes</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Side - Image -->
+        <div class="menu-overlay__right">
+            <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
+        </div>
+    </div>
+    
+    <!-- Cart -->
+    <div class="cart-container">
+        <div class="cart-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="product-column">PRODUCT</th>
+                        <th>PRICE</th>
+                        <th>QUANTITY</th>
+                        <th>TOTAL</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="product-column">
+                            <div class="product-details">
+                                <img src="/static/images/image1.jpg" alt="ZAHARA - S, Pink-Grey">
+                                <span>ZAHARA - S, Pink-Grey</span>
+                            </div>
+                        </td>
+                        <td>
+                            ₹14,000.00
+                        </td>
+                        <td>
+                            <div class="quantity-box">
+                                <button id="decrease">−</button>
+                                <span id="quantity">1</span>
+                                <button id="increase">+</button>
+                            </div>
+                        </td>
+                        <td>₹28,000.00</td>
+                        <td>
+                            <i class="fa-solid fa-xmark"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-buttons">
+                <button class="update-cart">UPDATE CART</button>
+                <button class="clear-cart">CLEAR CART</button>
+            </div>
+            <div class="coupon">
+                <input type="text" placeholder="Coupon code">
+                <button>APPLY COUPON</button>
+            </div>
+        </div>
+        <div class="cart-totals">
+            <h3>Price Details</h3>
+            <div class="cart-details">
+                <!-- <p><strong>Price:</strong> ₹28,000.00</p>
+                <p><strong>Discount:</strong> ₹0</p>
+                <p><strong>Delivery Charges:</strong>Free</p>
+                <p><strong>Total:</strong> ₹28,000.00</p> -->
+
+                <div class="price-row">
+                    <span>Price</span>
+                    <span class="amount">₹14,999</span>
+                </div>
+                <div class="price-row">
+                    <span>Discount</span>
+                    <span class="discount">₹0</span>
+                </div>
+                <div class="price-row">
+                    <span>Delivery Charges</span>
+                    <span class="free">Free</span>
+                </div>
+                <hr>
+                <div class="price-row total">
+                    <span><strong>Total Amount</strong></span>
+                    <span class="total-amount"><strong>₹9,899</strong></span>
+                </div>
+            </div>
+            <a href="/templates/checkout/checkout.html">
+            <button class="checkout-button">PROCEED TO CHECKOUT</button>
+            </a>
+        </div>
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer__sections">
+            <section class="footer__section">
+                <h3>Explore High Street Pix</h3>
+                <ul>
+                    <li><a href="#">Bridal Couture</a></li>
+                    <li><a href="#">Signature Collection</a></li>
+                    <li><a href="#">Luxury Fusion Lounge</a></li>
+                    <li><a href="#">Contemporary Drapes</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>Policy</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Returns & Cancellation</a></li>
+                    <li><a href="#">Orders - Shipping - Delivery</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>More About Pix</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Locate Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__info">HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road, Camp, Pune -
+            411001, Maharashtra, India | Contact : # 020 - 41207311</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+/**********************************
+ *   Extra Navbar Functionality   *
+ **********************************/
+ .checkout-page .navbar {
+    /* background: transparent !important; */
+    /* border-bottom: none !important; */
+    height: 86px;
+    position: sticky !important;
+}
+
+.checkout-page .search-input {
+    background: transparent !important;
+}
+
+.no-background {
+    background: none !important;
+}
+
+body {
+    background-color: white;
+}
+
+
+/* Checkout */
+.returning-customer-box {
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.returning-customer {
+    font-size: 14px;
+    color: black;
+}
+
+.returning-customer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.returning-customer a:hover {
+    text-decoration: underline;
+}
+
+/* Full Name Row Styling */
+.name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Adjust label width */
+.name-row label {
+    width: 30%; /* Matches other fields */
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Wrap both inputs inside a flex container */
+.name-fields {
+    display: flex; /* Adds spacing between first and last name fields */
+    width: 66%; /* Matches other fields */
+}
+
+/* Style the input fields */
+.name-fields input {
+    width: 50%; /* Each field takes half the space */
+    padding: 10px;
+    border: 1px solid #bfc0c6;
+    font-size: 14px;
+}
+
+/* Adjust Street Address Row */
+.street-address-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Make label and first input sit on the same row */
+.street-address-container label {
+    width: 30%; /* Keeps label size consistent */
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Special styling for Street Address Row */
+.street-row {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure inputs have uniform width */
+.street-address input {
+    width: 100%; /* Full width within its container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 20px auto 0;
+    min-height: calc(87vh - 20px);
+}
+
+.billing-section {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+}
+
+.order-summary {
+    width: 35%;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+}
+.order-summary::before {
+    content: "";
+    position: absolute;
+    top: 15px;  /* Moves the border down by 10px */
+    bottom: 15px; /* Moves the border up by 10px */
+    left: 0;  /* Aligns the border to the left */
+    width: 1px;  /* Width of the border */
+    background-color: #ddd; /* Color of the border */
+}
+
+h2 {
+    font-size: 18px;
+    color: black;
+    border-bottom: 1px solid #bfc0c6;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Form Row Styling */
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    width: 30%;
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.order-notes-row {
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.order-notes-row label {
+    margin-top: 5px;
+}
+
+.form-row select {
+    width: 65%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    background: none;
+    margin-right: 1%;
+    outline: none;
+    box-shadow: none;
+    color: grey;
+}
+
+.form-row input, .form-row textarea {
+    width: 65%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    background: none;
+    outline: none;
+    box-shadow: none;
+    color: grey;
+}
+
+.order-notes-row textarea {
+    width: 66%;
+}
+
+.form-row input[type="checkbox"] {
+    width: auto;
+}
+
+/* Two input fields in a row */
+.form-row input:nth-child(2) {
+    margin-right: 5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Payment Section */
+.payment-section {
+    margin-top: 15px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.payment-method img {
+    height: 20px;
+}
+
+.payment-info {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.privacy-info {
+    font-size: 12px;
+    color: #666;
+}
+
+.privacy-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.pay-button {
+    height: 42px;
+    width: 100%;
+    padding: 10px 40px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+.coupon-text {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.cart-totals {
+    width: 100%;
+    align-self: flex-start;
+    padding: 20px;
+}
+.cart-totals > h3 {
+    padding: 0 0 20px 0;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.total {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.total-amount {
+    font-weight: bold;
+}
+  

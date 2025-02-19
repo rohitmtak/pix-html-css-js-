@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/base/style.css">
+    <link rel="stylesheet" href="/static/css/base/navbar.css">
+    <link rel="stylesheet" href="/static/css/base/footer.css">
+    <link rel="stylesheet" href="/static/css/pages/footer-links.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+</head>
+
+<body class="footer-page">
+
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu(); navTrans()" id="menuButton">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <a href="/templates/auth/login.html">
+                <i class="far fa-user"></i>
+            </a>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <!-- Left Side - Menu -->
+        <div class="menu-overlay__left">
+            <ul class="menu-overlay__list">
+                <li><a href="/templates/category/bridal.html">Bridal Couture</a></li>
+                <li><a href="/templates/category/signature.html">Signature Collection</a></li>
+                <li><a href="/templates/category/luxury.html">Luxury Fusion Lounge</a></li>
+                <li><a href="/templates/category/contemporary.html">Contemporary Drapes</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Side - Image -->
+        <div class="menu-overlay__right">
+            <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
+        </div>
+    </div>
+
+    <!-- Privacy Policy -->
+
+    <div class="container">
+        <h1 class="title">Privacy Policy</h1>
+        <p>
+            By visiting this Website, you agree to be bound by the terms and conditions of this Privacy Policy. If you do not agree
+            please refrain from using our Website.
+        </p>
+
+        <h2>Privacy Philosophies</h2>
+        <p>
+            We at PIX follow certain privacy principles in our conduct in the collection, use, release and security of data both
+            online and offline :
+        </p>
+        <ul>
+            <li>Providing you with NOTICE of our data practices;</li>
+            <li>Giving you with CHOICES about how your data will be used;</li>
+            <li>Providing you with the opportunity to UPDATE or CORRECT your personal data;</li>
+            <li>Using data SECURITY safeguards;</li>
+            <li>Limiting the SHARING of your data;</li>
+            <li>Committing to COMPLYING with applicable privacy requirements;</li>
+            <li>Providing you with means to CONTACT US about privacy-related issues.</li>
+        </ul>
+
+        <h2>Privacy Protection</h2>
+        <p>
+            Our privacy policy is simple: any data you give us stays with us.
+        </p>
+        <p>
+            We respect your privacy and commit to ensure that we treat all data provided by you with the highest diligence and
+            integrity. This also and especially includes the cooperation with partners and third parties. We however do not accept
+            responsibility for third parties, unless stated otherwise.
+        </p>
+        <p>
+            When you use our Website, we collect and store your personal data which is provided by you from time to time. Our
+            primary goal in doing so is to provide you a safe, efficient, smooth and customized experience. This allows us to
+            provide services and features that most likely meet your needs, and to customize our Website to make your experience
+            safer and easier. More importantly, while doing so we collect personal data from you that we consider necessary for
+            fulfilling contractual relationship between PIX and you.
+        </p>
+        <p>
+            We secure our Website and other systems through technical and organizational measures against loss, destruction,
+            unauthorized access, modification and distribution of your data. You agree that despite regular controls, a complete
+            protection against all dangers is not possible.
+        </p>
+        <p>
+            In general, you can browse the Website without telling us who you are or revealing any personal data about yourself.
+            Once you give us your personal data, you are not anonymous to us.
+        </p>
+
+        <h2>Limited Data Access</h2>
+        <p>
+            Within our organization, your personal data is accessible to only a limited number of employees with special access
+            privileges. Although we may, from time to time, compile general demographic data based on your order, this data is
+            shared within our organization only and has no identifiable personal data associated with it.
+        </p>
+
+        <h2>Data Collected</h2>
+        <p>
+            To enable you to place an order on our Website, we need to have the following basic data about you : first and last
+            name, email address, mailing address, telephone numbers, date of birth, anniversary date, gender, size, address, phone
+            number, contact e-mail address and if you transact business with us, your billing address and your limited financial
+            data. To ensure your Services are enhanced, PIX may use and collect your location.
+        </p>
+        <p>
+            Apart from this, our systems gather certain details about (i) your device’s internet connection like your IP address
+            when you visit our site, and its geographic location; (ii) browser type and version, language, time zone setting,
+            browser plug-in types & version, OS and platform, domain names, access times, referring website addresses; (iii) your
+            search terms or interactive behavior via our Website; and (iv) your purchasing behavior. This data does not identify you
+            personally. We may use this data in aggregate form for internal business purposes, such as generating statistics and
+            developing marketing plans and to customize our site as per your interest.
+        </p>
+        <p>
+            We do not allow any unauthorized person or organization be it other members, visitors, and anyone not in our
+            organization to use any data collected from you.
+        </p>
+        <p>
+            Note : Our privacy policy is subject to change at any time without notice. Unless stated otherwise, our current Privacy
+            Policy applies to all data that we have about you and your account.
+        </p>
+
+        <h2>Data Modification</h2>
+        <p>
+            You can modify your personal details or unsubscribe the receipt of promotional emails we send you by accessing the Edit
+            Profile option at any time from our Website.
+        </p>
+        <p>
+            You have the right to receive free data about your stored data at any time as well as the right to correct, lock or
+            delete this data. In such a case, however we will have the option not to provide our Services, for the provision of
+            which, the consent to use the data was sought.
+        </p>
+        <p>
+            You can choose to modify your cookie settings of your browser to warn you when a cookie is being sent or to remove or
+            reject cookies. If you choose to remove or reject cookies, it will affect many features or Services on our Website.
+        </p>
+
+        <h2>Data Sharing</h2>
+        <p>
+            To some extent, data has to be passed on to the courier companies, credit card processing companies, vendors, etc. to
+            enable them to perform their functions related to your order fulfilment.
+        </p>
+        <p>
+            Apart from this normal business requirement, data may also be disclosed, intercepted, stored, or monitored without your
+            knowledge, with law authorities, for fraud detection, for securing our systems, for enforcing our own rights, for the
+            safety of our Website, employees, management, users, and other affiliates associated with us. In these cases, we will
+            not be liable to you or any third party for any damages howsoever arising from such interception, disclosure, monitoring
+            and storage. This monitoring may include (without limitation) the filtering of incoming and outgoing electronic data
+            messages to identify, limit and/or prevent the transmission of spam, viruses and/or unlawful, defamatory, obscene or
+            otherwise undesirable material or content.
+        </p>
+
+        <h2>Links to other Sites</h2>
+        <p>
+            Our Website links to other websites, or social plugins that may collect personally identifiable data about you. We are
+            not responsible for the privacy practices or the content of those linked websites.
+        </p>
+
+        <h2>Data Usage</h2>
+        <p>
+            The most important usage of the data collected from you is your email address which is used to inform you that your
+            order has been confirmed/executed. Your email address is also used to inform you for your customer service-related
+            queries and for any newsletters sent. All other data collected is confidentially stored and will not be disclosed unless
+            needed as per the requirement of the law authorities or in case of any dispute.
+        </p>
+        <p>
+            Certain data collected from you like your contact data and demographic data may be used to tailor your experience at our
+            Website, providing you with content that we think you might be interested in and to display content according to your
+            preferences.
+        </p>
+
+        <h2>Data Retention</h2>
+        <p>
+            Your data will only be retained for as long as necessary to fulfil the purposes for which it was obtained. As registered
+            users, at a minimum this will be for the purpose of providing you Services and as long as your account is active, and
+            likely longer depending upon applicable laws.
+        </p>
+        <p>
+            If you close your account, we may still retain certain data associated with your account for analytical purposes, record
+            keeping requirements, to prevent fraud, collect fees owed, enforce our rights, or otherwise required by law.
+        </p>
+
+        <h2>Your Consent</h2>
+        <p>
+            By using the Website and/or by providing your data, you consent to the collection and use of the data you disclose on
+            the Website in accordance with this Privacy Policy, including but not limited to Your consent for sharing your data as
+            per this Privacy Policy.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+            If you have questions or suggestions for us, or want to exercise your rights under this Privacy Policy, please contact
+            us at support@highstreetpix.com or by postal mail to : HIGH STREET PIX, 22- 25, Wonderland, Lower Ground Floor, 7 M.G.
+            Road, Camp, Pune – 411001, Maharashtra, India.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__sections">
+            <section class="footer__section">
+                <h3>Explore High Street Pix</h3>
+                <ul>
+                    <li><a href="#">Bridal Couture</a></li>
+                    <li><a href="#">Signature Collection</a></li>
+                    <li><a href="#">Luxury Fusion Lounge</a></li>
+                    <li><a href="#">Contemporary Drapes</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>Policy</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Returns & Cancellation</a></li>
+                    <li><a href="#">Orders - Shipping - Delivery</a></li>
+                </ul>
+            </section>
+            <section class="footer__section">
+                <h3>More About Pix</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Locate Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Company Profile</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer__info">HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road, Camp, Pune -
+            411001, Maharashtra, India | Contact : # 020 - 41207311</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function navTrans() {
+            const navbar = document.querySelector(".footer-page .navbar");
+            if (navbar) {
+                navbar.classList.toggle("no-background");
+            }
+        }
+     </script>
+    <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>

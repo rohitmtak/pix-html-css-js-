@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/base/style.css">
+    <link rel="stylesheet" href="/static/css/base/navbar.css">
+    <link rel="stylesheet" href="/static/css/pages/login.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="navbar__left">
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search__box">
+                <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+            </div>
+        </div>
+
+        <a href="/templates/home/index.html" class="navbar__logo">
+            <img src="/static/images/pix-black-logo.png" alt="Pix Logo">
+        </a>
+
+        <div class="navbar__right">
+            <i class="far fa-user"></i>
+            <i class="far fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </header>
+
+    <!-- Sign In and Create An Account-->
+    <div class="account-container">
+        <h1>My account</h1>
+
+        <div class="tabs">
+            <span class="tab active" id="signInTab">Sign in</span>
+            <span class="tab" id="signUpTab">Create An Account</span>
+        </div>
+
+        <!-- Sign In Form -->
+        <!-- <form class="form active" id="signInForm">
+            <label for="username">Username or email address</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" required>
+                <i class="fas fa-eye-slash"></i>
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+
+            <button type="submit">SIGN IN</button>
+
+            <a href="#" class="forgot-password">LOST YOUR PASSWORD?</a>
+        </form> -->
+        <form class="form active" id="signInForm">
+            <div class="form-group">
+                <input type="text" id="username" placeholder=" " required>
+                <label for="username">Username or email address</label>
+            </div>
+        
+            <div class="form-group password-container">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">Password</label>
+                <i class="fas fa-eye-slash"></i>
+            </div>
+        
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+        
+            <button type="submit">SIGN IN</button>
+        
+            <a href="#" class="forgot-password">LOST YOUR PASSWORD?</a>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form class="form" id="signUpForm">
+            <div class="form-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email address *</label>
+            </div>
+
+            <p>A link to set a new password will be sent to your email address.</p>
+
+            <p>Your personal data will be used to support your experience throughout this website, 
+                to manage access to your account, and for other purposes described in our Privacy policy.</p>
+
+            <button type="submit">SIGN UP</button>
+        </form>
+
+    </div>
+    
+    <script src="/static/js/pages/auth.js"></script>
+    <script src="/static/js/base/main.js"></script>
+</body>
+
+</html>
