@@ -98,7 +98,7 @@ body {
     height: 2px;
     background-color: white;
     position: absolute;
-    bottom: -8px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
@@ -106,6 +106,34 @@ body {
 
 .button--primary:hover::after {
     width: 100%;
+}
+
+/* Video Audio Button (icon)*/
+.video__audio-button {
+    position: absolute;
+    top: calc(100% + 35px); /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide the non-active icon */
+.audio-icon {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the active icon */
+.audio-icon.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative; /* Ensures it stays in flow */
 }
 
 
