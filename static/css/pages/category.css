@@ -1,7 +1,7 @@
 /**********************************
  *   Extra Navbar Functionality   *
  **********************************/
- .product-display .navbar {
+.product-display .navbar {
     /* background: transparent !important; */
     /* border-bottom: none !important; */
     position: sticky !important;
@@ -10,8 +10,6 @@
 .product-display .search-input {
     background: transparent !important;
 }
-
-
 
 /* Filter */
 .filter {
@@ -52,12 +50,12 @@
     cursor: pointer;
 }
 
-.product__title {
-    padding: 10px 0 5px 0;
-}
-
-.product__price {
-    padding-bottom: 30px;
+.bottom-elements .product__price {
+    margin-left: auto;
+    color: black;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /* Carousel */
@@ -92,26 +90,31 @@
     right: 10px;
 }
 
-/* Dots for color variants */
-.dots {
+/* Position dots and price */
+.bottom-elements {
     position: absolute;
     bottom: 5px;
-    right: 10px;
+    left: 0;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Dots styling */
+.dots {
+    display: flex;
+    gap: 5px;
 }
 
 .dot {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background-color: gray;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2px;
     cursor: pointer;
     border: 1px solid black;
-    position: relative;
 }
 
 /* Hide the checkmark initially */
