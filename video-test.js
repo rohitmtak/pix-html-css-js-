@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById("myVideo");
     const volumeButton = document.getElementById("audioButton");
     const muteIcon = volumeButton.querySelector(".fa-volume-xmark");
-    const unmuteIcon = volumeButton.querySelector(".fa-volume");
+    const unmuteIcon = volumeButton.querySelector(".fa-volume-up");
 
     // Ensure correct initial state
     video.muted = true;
@@ -33,5 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
             muteIcon.classList.add("active");
             unmuteIcon.classList.remove("active");
         }
+        muteIcon.classList.toggle("hidden");
+        unmuteIcon.classList.toggle("hidden");
     });
+
+    
 });

@@ -123,9 +123,9 @@ body {
 
 /* Hide the non-active icon */
 .audio-icon {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    position: relative;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -136,6 +136,9 @@ body {
     position: relative;
 }
 
+.hidden {
+    display: none !important;
+}
 
 /**********************************
  *       Responsive Section       *
