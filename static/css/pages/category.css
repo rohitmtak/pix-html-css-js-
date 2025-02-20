@@ -58,6 +58,18 @@
     font-weight: 500;
 }
 
+/* .bottom-elements .product__price {
+    margin-left: auto;
+    color: black;
+    padding: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: inline-block;
+} */
+
 /* Carousel */
 .product__image--carousel {
     position: relative;
@@ -127,6 +139,7 @@
 /* Show checkmark when active */
 .dot.active i {
     display: block;
+    padding: 1px;
 }
 
 

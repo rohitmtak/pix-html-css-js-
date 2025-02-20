@@ -61,6 +61,11 @@
     height: 86px;
 }
 
+.no-background {
+    background: none !important;
+    border-bottom: none !important;
+}
+
 .cart-page .search-input {
     background: transparent !important;
 }
@@ -353,17 +358,17 @@ td {
 
     .coupon input {
         width: 25%;
+        height: 32px;
     }
 
     .coupon button {
-        width: 25%;
+        width: 18%;
+        height: 32px;
     }
 
     .cart-buttons {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 100%;
     }
 
     .cart-buttons button {

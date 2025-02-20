@@ -30,6 +30,7 @@ h1, h2, h3 {
 /* ✅ Links */
 a {
     text-decoration: none;
+    color: black;
 }
 
 

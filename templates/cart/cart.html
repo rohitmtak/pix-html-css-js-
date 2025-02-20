@@ -30,7 +30,7 @@
     <!-- Header/Navbar -->
     <header class="navbar">
         <div class="navbar__left">
-            <button class="menu-btn" onclick="toggleMenu()" id="menuButton">
+            <button class="menu-btn" onclick="toggleMenu(); navTrans()" id="menuButton">
                 <i class="fas fa-bars" id="menuIcon"></i>
             </button>
             <div class="search__box">
@@ -184,6 +184,14 @@
     </footer>
 
     <!-- JavaScript -->
+    <script>
+        function navTrans() {
+            const navbar = document.querySelector(".cart-page .navbar");
+            if (navbar) {
+                navbar.classList.toggle("no-background");
+            }
+        }
+     </script>
     <script src="/static/js/base/main.js"></script>
 </body>
 
