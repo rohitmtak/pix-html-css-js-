@@ -63,8 +63,7 @@
 
 .no-background {
     background: none !important;
-    border-bottom: none !important;
-}
+    border-bottom: 1px solid transparent !important;}
 
 .cart-page .search-input {
     background: transparent !important;

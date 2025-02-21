@@ -14,8 +14,7 @@
 
 .no-background {
     background: none !important;
-    border-bottom: none !important;
-}
+    border-bottom: 1px solid transparent !important;}
 
 body {
     background-color: white;
