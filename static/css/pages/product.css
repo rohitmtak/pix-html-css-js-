@@ -241,8 +241,8 @@
 }
 
 .size-chart-content {
-    margin: 5% auto 0 auto;
-    width: 100%;
+    margin: 5% auto 0;
+    width: 80%;
 }
 
 /* Overlay Effect */
@@ -260,7 +260,7 @@
 /* Size Chart Image */
 .size-chart-content img {
     width: auto;
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0px auto;
@@ -270,29 +270,30 @@
     color: red;
     font-size: 16px;
     text-align: left;
-    margin: 10px 0 0 10%;
-    width: 80%;
+    /* margin: 10px 0 0 10%; */
+    width: 100%;
 }
 
 .size-guide-text {
     font-size: 14px;
-    line-height: 2;
+    /* line-height: 2; */
     text-align: left;
-    margin: 0 0 0 10%;
-    width: 80%;
+    /* margin: 0 0 0 10%; */
+    width: 100%;
 }
 
 .size-guide-btn {
     display: block;
     padding: 10px 40px;
     border: 1px solid black;
-    background: #bfc0c6;
+    background: black;
+    color: white;
     cursor: pointer;
     font-size: 15px;
     height: 42px;
     width: 230px;
     text-align: center;
-    margin: 20px 0 0 10%;
+    margin-top: 20px;
 }
 
 .close-btn {
