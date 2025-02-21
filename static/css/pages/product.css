@@ -43,7 +43,8 @@
 /* RIGHT: DETAILS SECTION */
 .product-details {
     width: 50%;
-    padding: 60px;
+    padding: 80px;
+    padding-right: 110px;
     background: white;
     position: relative;
     z-index: 6;

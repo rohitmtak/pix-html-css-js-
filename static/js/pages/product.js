@@ -20,78 +20,83 @@ function toggleSearch() {
 //     }
 // });
 
-////////// Carousel with Redirection Feature
+function openSizeChart() {
+    document.getElementById("sizeChart").style.right = "0";
+}
+
+function closeSizeChart() {
+    document.getElementById("sizeChart").style.right = "-50%";
+}
+
+///////////////////////////////////
+
 document.addEventListener("DOMContentLoaded", () => {
     const productVariants = [
-        {
-            color: "#f4f6f7",
-            images: [
-                "/static/images/signature/img2.1.jpg",
-                "/static/images/signature/img2.3.jpg",
-                "/static/images/signature/img2.4.jpg",
-            ],
-            url: "/templates/product/product-display.html?variant=1", // ✅ Updated URL
-        },
-        {
-            color: "#FFD700",
-            images: [
-                "/static/images/signature/img2.22.jpg",
-                "/static/images/signature/img2.33.jpg",
-                "/static/images/signature/img2.44.jpg",
-            ],
-            url: "/templates/product/product-display.html?variant=2", // ✅ Updated URL
-        },
+      {
+        color: "#f4f6f7",
+        images: [
+          "/static/images/signature/product-display/img1.1.jpg",
+          "/static/images/signature/product-display/img2.2.jpg",
+          "/static/images/signature/product-display/img3.3.jpg",
+        ],
+      },
+      {
+        color: "#FFD700",
+        images: [
+          "/static/images/signature/product-display/img1.jpg",
+          "/static/images/signature/product-display/img2.jpg",
+          "/static/images/signature/product-display/img3.jpg",
+        ],
+      },
     ];
 
-    let currentVariantIndex = 0;
-    let currentImageIndex = 0;
+    let currentVariantIndex = 0; // Tracks the current color variant
+    let currentImageIndex = 0;   // Tracks the current image within the variant
 
-    const imageElement = document.getElementById("productImage");
-    const dots = document.querySelectorAll(".dot");
+    const imageElement = document.querySelector(".product-image img");
+    const colors = document.querySelectorAll(".color");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
 
+    // Function to update the image
     function updateImage() {
-        const newImage = productVariants[currentVariantIndex].images[currentImageIndex];
-
-        // Preserve dimensions by updating only the src
-        imageElement.setAttribute("src", newImage);
-    }
-
+      const newImageSrc = productVariants[currentVariantIndex].images[currentImageIndex];
+  
+      // Update only the image src without modifying its dimensions
+      imageElement.src = newImageSrc;
+  }
+  
+    // Function to change images using arrow buttons
     function changeImage(direction) {
         const images = productVariants[currentVariantIndex].images;
         currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
         updateImage();
     }
 
+    // Function to change product variant when clicking on a color
     function changeVariant(index) {
-        currentVariantIndex = index;
-        currentImageIndex = 0;
-        updateImage();
+        if (currentVariantIndex !== index) {
+            currentVariantIndex = index;
+            currentImageIndex = 0;  // Reset image index for the new variant
+            updateImage();
 
-        dots.forEach((dot, i) => {
-            dot.classList.remove("active");
-            dot.innerHTML = ""; // Remove any existing checkmark
-            dot.style.backgroundColor = productVariants[i].color;
-        });
-
-        dots[index].classList.add("active");
-        dots[index].innerHTML = `<i class="fa-solid fa-check"></i>`; // Add checkmark icon
+            // Remove checkmark from all colors
+            colors.forEach(color => color.innerHTML = "");
+            
+            // Add checkmark to the selected color
+            colors[index].innerHTML = `<i class="fa-solid fa-check"></i>`;
+        }
     }
 
-    dots.forEach((dot, i) => {
-        dot.style.backgroundColor = productVariants[i].color;
-        dot.addEventListener("click", () => changeVariant(i));
+    // Attach event listeners for image navigation
+    prevBtn.addEventListener("click", () => changeImage(-1));
+    nextBtn.addEventListener("click", () => changeImage(1));
+
+    // Attach event listeners for color selection
+    colors.forEach((color, i) => {
+        color.addEventListener("click", () => changeVariant(i));
     });
 
-    // ✅ New Feature: Redirect to `product-display.html` when clicking the image
-    imageElement.addEventListener("click", () => {
-        const productURL = productVariants[currentVariantIndex].url; // Get the URL of the selected variant
-        window.location.href = productURL; // Redirect to the corresponding product details page
-    });
-
-    window.prevImage = () => changeImage(-1);
-    window.nextImage = () => changeImage(1);
-    window.changeColorVariant = changeVariant;
-
+    // Initialize first image & active color
     updateImage();
-    changeVariant(0); // Initialize first active dot with checkmark
 });

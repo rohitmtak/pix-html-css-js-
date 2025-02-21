@@ -5,10 +5,16 @@
     /* background: transparent !important; */
     /* border-bottom: none !important; */
     position: sticky !important;
+    height: 86px;
 }
 
 .product-display .search-input {
     background: transparent !important;
+}
+
+.no-background {
+    background: none !important;
+    border-bottom: none !important;
 }
 
 /* Filter */
@@ -19,7 +25,183 @@
     padding: 15px;
     font-size: 16px;
     color: black;
+    cursor: pointer;
 }
+
+
+
+/* Test Filter */
+.filter-popup {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 10000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.filter-content {
+    width: 80%;
+    margin: 5% auto 0;
+}
+
+.filter-content * {
+    padding: 5px 0;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.filter-header h5 {
+    margin: 0;
+}
+
+.filter-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.form-select {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+/* .form-range {
+    width: 100%;
+    margin-top: 10px;
+} */
+.form-range {
+    -webkit-appearance: none; /* Removes default styling */
+    width: 100%;
+    height: 4px; /* Adjust the thickness of the track */
+    /* background: #ddd; Track color */
+    /* border-radius: 2px; */
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+    margin: 10px 0;
+}
+
+.form-range:hover {
+    opacity: 1;
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.form-range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2.5px; /* Track thickness */
+    background: #000; /* Change this to your preferred track color */
+    /* border-radius: 2px; */
+}
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #000; /* Change this to your preferred thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* Centers the thumb on the track */
+}
+
+/* Firefox */
+.form-range::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    background: #000;
+    /* border-radius: 2px; */
+}
+
+.form-range::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Internet Explorer */
+.form-range::-ms-track {
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+}
+
+.form-range::-ms-thumb {
+    width: 14px;
+    height: 14px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.price-range {
+    font-size: 12px;
+    text-align: center;
+    /* margin-top: -5px; */
+    margin-bottom: 10px;
+}
+
+.btn {
+    border-radius: 0;
+    padding: 10px;
+}
+
+.filter-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-footer > button {
+    color: white;
+    background-color: black;
+    width: 48%;
+}
+
+.filter-footer > button:nth-child(2) {
+    color: black;
+    background-color: white;
+    border: 1px solid #bfc0c6;
+    transition: border 0.2s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.filter-footer > button:nth-child(2):hover {
+    border-width: 1.5px;
+    border-color: black;
+}
+
+
+
+
 
 /* Product Grid */
 .product-grid {

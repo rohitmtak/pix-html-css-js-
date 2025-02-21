@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pix</title>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/static/css/base/style.css">
+  <link rel="stylesheet" href="/static/css/base/navbar.css">
+  <link rel="stylesheet" href="/static/css/base/footer.css">
+
+  <!-- Product CSS -->
+  <link rel="stylesheet" href="/static/css/pages/product.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    crossorigin="anonymous" />
+</head>
+
+<body class="product-display">
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="navbar__left">
+      <button class="menu-btn" onclick="toggleMenu()" id="menuButton">
+        <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+      <div class="search__box">
+        <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+      </div>
+    </div>
+    <!-- <div class="navbar__left">
+        <button class="menu-btn" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="search__box">
+          <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search..."
+          />
+        </div>
+      </div> -->
+
+    <a href="/templates/home/index.html" class="navbar__logo">
+      <img src="/static/images/pix-black-logo.png" alt="Pix Logo" />
+    </a>
+
+    <div class="navbar__right">
+      <i class="far fa-user"></i>
+      <i class="far fa-hearfar fa-heart"></i>
+      <i class="fa-solid fa-bag-shopping"></i>
+    </div>
+  </header>
+  <!--------- Navbar End --------->
+
+  <!-- Full-Screen Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay">
+    <!-- Left Side - Menu -->
+    <div class="menu-overlay__left">
+      <ul class="menu-overlay__list">
+        <li><a href="/templates/product-category/bridal.html">Bridal Couture</a></li>
+        <li><a href="/templates/product-category/signature.html">Signature Collection</a></li>
+        <li><a href="/templates/product-category/luxury.html">Luxury Fusion Lounge</a></li>
+        <li><a href="/templates/product-category/contemporary.html">Contemporary Drapes</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Side - Image -->
+    <div class="menu-overlay__right">
+      <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
+    </div>
+  </div>
+
+  <!-- Product display -->
+  <main class="product-container">
+    <!-- Left: Full-Screen Product Image -->
+    <div class="product-image">
+      <img src="/static/images/signature/img2.4.jpg" alt="Camilla Blue Dress" loading="lazy" />
+
+      <!-- Inside Image Buttons -->
+      <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Right: Product Details -->
+    <div class="product-details">
+      <h1>CAMILLA</h1>
+      <p class="product-subtitle">Ethnic Motifs Midi Dress</p>
+      <p class="price">₹48,000</p>
+
+      <div class="sizes">
+        <div class="size-header">
+          <p>Select Size</p>
+          <span class="size-chart" onclick="openSizeChart()">
+            Size Chart &#10095;
+          </span>
+        </div>
+        <div class="size-options">
+          <span class="size active">S</span>
+          <span class="size">M</span>
+          <span class="size">L</span>
+          <span class="size">XL</span>
+        </div>
+      </div>
+
+      <div class="colors">
+        <p>Color</p>
+        <div class="color-options">
+          <span class="color active" style="background-color: #1e4ca1">
+            <i class="fa-solid fa-check"></i>
+          </span>
+          <span class="color" style="background-color: #c4a484"></span>
+        </div>
+      </div>
+
+      <div class="quantity-cart-container">
+        <!-- <button class="add-to-cart">ADD TO BAG</button> -->
+
+        <a href="/templates/cart/cart.html">
+          <button class="add-to-cart">ADD TO BAG</button>
+        </a>
+
+
+        <button class="wishlist">
+          <i class="far fa-heart"></i> WISHLIST
+        </button>
+      </div>
+
+      <p class="product-description">
+        Step into a world of enchantment with this mesmerizing ice-blue
+        mermaid gown. Adorned with shimmering beadwork and delicate sequins,
+        this gown sparkles like a starlit night, casting a magical glow with
+        every movement.
+      </p>
+    </div>
+  </main>
+
+  <!-- Right Side- Size Chart Popup -->
+  <div class="size-chart-popup" id="sizeChart">
+    <div class="size-chart-content">
+      <button class="close-btn" onclick="closeSizeChart()">✖</button>
+      <p class="note">Note: all the sizes are in inches.</p>
+      <img src="/static/images/size-chart.jpg" alt="Size Chart" loading="lazy" />
+      <p class="size-guide-text">
+        This is a standard size guide for basic body measurements. There may
+        be some variations according to the category you are choosing. We
+        request you to refer to the measurements displayed or contact us at
+        +91 9123456789
+      </p>
+      <button type="button" class="size-guide-btn">Size Guide Video</button>
+    </div>
+  </div>
+
+  <!--------- Footer Start --------->
+  <footer class="footer">
+    <div class="footer__sections">
+      <section class="footer__section">
+        <h3>Explore High Street Pix</h3>
+        <ul>
+          <li><a href="#">Bridal Couture</a></li>
+          <li><a href="#">Signature Collection</a></li>
+          <li><a href="#">Luxury Fusion Lounge</a></li>
+          <li><a href="#">Contemporary Drapes</a></li>
+        </ul>
+      </section>
+      <section class="footer__section">
+        <h3>Policy</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Returns & Cancellation</a></li>
+          <li><a href="#">Orders - Shipping - Delivery</a></li>
+        </ul>
+      </section>
+      <section class="footer__section">
+        <h3>More About Pix</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Locate Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Company Profile</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="footer__info">
+      HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road,
+      Camp, Pune - 411001, Maharashtra, India | Contact : # 020 - 41207311
+    </p>
+  </footer>
+  <!--------- Footer End --------->
+
+  <!-- JavaScript -->
+  <script src="/static/js/base/main.js"></script>
+  <script src="/static/js/pages/product.js"></script>
+</body>
+
+</html>

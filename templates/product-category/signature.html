@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="/static/css/base/style.css">
   <link rel="stylesheet" href="/static/css/base/navbar.css">
   <link rel="stylesheet" href="/static/css/base/footer.css">
-  <link rel="stylesheet" href="/static/css/pages/category.css" />
+
+  <link rel="stylesheet" href="/static/css/pages/product-category.css">
+  
+  <!-- <link rel="stylesheet" href="/test-filter.css"> -->
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,14 +32,14 @@
   <!-- Header/Navbar -->
   <header class="navbar">
     <div class="navbar__left">
-      <button class="menu-btn" onclick="toggleMenu()" id="menuButton">
-          <i class="fas fa-bars" id="menuIcon"></i>
+      <button class="menu-btn" onclick="toggleMenu(); navTrans()" id="menuButton">
+        <i class="fas fa-bars" id="menuIcon"></i>
       </button>
       <div class="search__box">
-          <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
-          <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+        <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search...">
       </div>
-  </div>
+    </div>
 
     <a href="/templates/home/index.html" class="navbar__logo">
       <img src="/static/images/pix-black-logo.png" alt="Pix Logo" />
@@ -49,30 +52,69 @@
     </div>
   </header>
 
-  <!-- Full-Screen Menu Overlay -->
+  <!-- Menu Toggle Screen -->
   <div class="menu-overlay" id="menuOverlay">
     <!-- Left Side - Menu -->
     <div class="menu-overlay__left">
-        <ul class="menu-overlay__list">
-            <li><a href="/templates/category/bridal.html">Bridal Couture</a></li>
-            <li><a href="/templates/category/signature.html">Signature Collection</a></li>
-            <li><a href="/templates/category/luxury.html">Luxury Fusion Lounge</a></li>
-            <li><a href="/templates/category/contemporary.html">Contemporary Drapes</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
+      <ul class="menu-overlay__list">
+        <li><a href="/templates/product-category/bridal.html">Bridal Couture</a></li>
+        <li><a href="/templates/product-category/signature.html">Signature Collection</a></li>
+        <li><a href="/templates/product-category/luxury.html">Luxury Fusion Lounge</a></li>
+        <li><a href="/templates/product-category/contemporary.html">Contemporary Drapes</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
     </div>
 
     <!-- Right Side - Image -->
     <div class="menu-overlay__right">
-        <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
+      <img src="/static/images/menu-image.jpg" alt="Fashion Banner">
     </div>
-</div>
+  </div>
 
   <!-- Filter Section -->
-  <section class="filter">
+  <div class="filter" onclick="openFilter()">
     <i class="fa-solid fa-sliders"></i>
     <p>Filter by</p>
-  </section>
+  </div>
+
+  <!-- Filter pop up -->
+  <div class="filter-popup" id="filter">
+    <div class="filter-content">
+      <div class="filter-header">
+        <h4>Filter By</h4>
+        <span class="close" onclick="closeFilter()">&times;</span>
+      </div>
+      <div class="filter-body">
+        <label>CATEGORIES</label>
+        <select class="form-select">
+          <option selected>Select a Category</option>
+        </select>
+
+        <label>SORT BY</label>
+        <select class="form-select">
+          <option selected>All Products</option>
+        </select>
+
+        <label>COLOR</label>
+        <select class="form-select">
+          <option selected>Any color</option>
+        </select>
+
+        <label>SIZE</label>
+        <select class="form-select">
+          <option selected>Any size</option>
+        </select>
+
+        <label>PRICE</label>
+        <input type="range" min="9000" max="92000" value="9000" class="form-range" id="priceRange">
+        <p class="price-range">Price: ₹<span id="minPrice">9,000</span> - ₹92,000</p>
+      </div>
+      <div class="filter-footer">
+        <button class="btn btn-dark w-100">FILTER</button>
+        <button class="btn btn-outline-dark w-100 mt-2">RESET FILTER</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Product Section -->
   <section class="products">
@@ -115,7 +157,7 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
+        </div>
       </article>
 
       <article class="product">
@@ -125,7 +167,7 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
+        </div>
       </article>
 
       <article class="product">
@@ -135,7 +177,7 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
+        </div>
       </article>
 
       <article class="product">
@@ -145,7 +187,7 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
+        </div>
       </article>
 
       <article class="product">
@@ -155,7 +197,7 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
+        </div>
       </article>
 
       <article class="product">
@@ -165,7 +207,7 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
+        </div>
       </article>
 
       <article class="product">
@@ -175,9 +217,9 @@
           <div class="bottom-elements">
             <p class="product__price">₹45000</p>
           </div>
-        </div>  
-      </article>    
-      
+        </div>
+      </article>
+
     </main>
   </section>
 
@@ -216,11 +258,20 @@
       HIGH STREET PIX, 22 - 25, Wonderland, Lower Ground Floor, 7 M.G. Road,
       Camp, Pune - 411001, Maharashtra, India | Contact : # 020 - 41207311
     </p>
-  </footer>
+  </footer> 
 
   <!-- JavaScript -->
-  <script src="/static/js/pages/product.js"></script>
+  <script>
+    function navTrans() {
+      const navbar = document.querySelector(".product-display .navbar");
+      if (navbar) {
+        navbar.classList.toggle("no-background");
+      }
+    }
+  </script>
+  <!-- <script src="/static/js/pages/product.js"></script> -->
   <script src="/static/js/base/main.js"></script>
+  <script src="/static/js/pages/product-category.js"></script>
 </body>
 
 </html>
