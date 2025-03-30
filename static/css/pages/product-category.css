@@ -12,9 +12,9 @@
     background: transparent !important;
 }
 
-.no-background {
+.product-display .no-background {
     background: none !important;
-    border-bottom: 1px solid transparent !important;
+    /* border-bottom: 1px solid transparent !important; */
 }
 
 /* Filter */

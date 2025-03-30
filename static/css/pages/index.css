@@ -167,19 +167,19 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    z-index: 1; /* Place behind navbar */
+    height: 100vh;
+    z-index: 1; 
     overflow: hidden;
 }
 
 /* Video Style */
 video {
-    object-fit: cover; /* Ensure video doesn't get stretched or distorted */
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-out; /* Smooth transition for scaling */
-    transform-origin: top center; /* Ensure it scales from the top center */
-    position: absolute; /* Absolute positioning inside the container */
+    transition: transform 0.5s ease-out;
+    transform-origin: top center;
+    position: absolute;
 }
 
 

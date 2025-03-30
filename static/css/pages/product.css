@@ -1,7 +1,7 @@
 /**********************************
  *   Extra Navbar Functionality   *
  **********************************/
- .product-display .navbar {
+.product-display .navbar {
     background: transparent !important;
     border-bottom: none !important;
     position: sticky !important;
@@ -11,6 +11,7 @@
 .product-display .search-input {
     background: transparent !important;
 }
+
 /********* Product Display *********/
 .product-container {
     display: flex;
@@ -270,15 +271,12 @@
     color: red;
     font-size: 16px;
     text-align: left;
-    /* margin: 10px 0 0 10%; */
     width: 100%;
 }
 
 .size-guide-text {
     font-size: 14px;
-    /* line-height: 2; */
     text-align: left;
-    /* margin: 0 0 0 10%; */
     width: 100%;
 }
 

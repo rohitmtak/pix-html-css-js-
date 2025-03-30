@@ -202,12 +202,20 @@ td {
 }
 
 .checkout-button {
-    background-color: black;
+    /* background-color: black;
     color: white;
     border: none;
     padding: 10px;
     width: 100%;
+    cursor: pointer; */
+    height: 42px;
+    width: 100%;
+    padding: 10px 40px;
+    border: none;
+    font-size: 15px;
     cursor: pointer;
+    color: white;
+    background-color: black;
 }
 
 
@@ -279,12 +287,12 @@ td {
 
     .checkout-button {
         padding: 15px;
-        font-size: 16px;
+        /* font-size: 16px; */
     }
 }
 
 /* Medium screens like tablets (max-width: 1024px) */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .cart-container {
         flex-direction: column;
         width: 90%;
@@ -335,7 +343,7 @@ td {
         font-size: 18px;
         padding: 12px;
     }
-}
+} */
 
 /* Large screens (desktops and larger) */
 @media (min-width: 1025px) {
@@ -375,7 +383,7 @@ td {
     }
 
     .checkout-button {
-        font-size: 16px;
+        /* font-size: 16px; */
         width: 100%;
     }
 }
